@@ -61,7 +61,7 @@ namespace WindowsTerminalQuake
 
 		public void Toggle(bool open, int durationMs)
 		{
-			var stepCount = (int)Math.Max(Math.Ceiling(durationMs / 25f), 1f);
+			var stepCount = durationMs;
 			var stepDelayMs = durationMs / stepCount;
 			var screen = GetScreenWithCursor();
 
