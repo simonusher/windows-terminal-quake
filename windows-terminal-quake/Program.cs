@@ -33,6 +33,7 @@ namespace WindowsTerminalQuake
 				var hks = string.Join(" or ", Settings.Instance.Hotkeys.Select(hk => $"{hk.Modifiers}+{hk.Key}"));
 
 				_trayIcon.Notify(ToolTipIcon.Info, $"Windows Terminal Quake is running, press {hks} to toggle.");
+				_toggler.Toggle(false, 0);
 			}
 			catch (Exception ex)
 			{

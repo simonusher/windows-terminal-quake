@@ -17,16 +17,16 @@
 
 	// Make the window see-through (applies to the entire window, including the title bar).
 	// 0 (invisible) - 100 (opaque)
-	"Opacity": 80,
+	"Opacity": 97,
 
 	// How long the toggle up/down takes in milliseconds.
-	"ToggleDurationMs": 250,
+	"ToggleDurationMs": 100,
 
 	// How much room to leave between the top of the terminal and the top of the screen.
 	"VerticalOffset": 0,
 
 	// How far the terminal should come down, in percentage (eg. 50 = half way, 100 = full screen).
-	"VerticalScreenCoverage": 80,
+	"VerticalScreenCoverage": 35,
 
 	// When "HorizontalScreenCoverage" is below 100, this setting determines where the terminal is place horizontally.
 	// "Center", "Left" or "Right".

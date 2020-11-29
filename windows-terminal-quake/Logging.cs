@@ -8,7 +8,7 @@ namespace WindowsTerminalQuake
 	{
 		public static void Configure()
 		{
-			var here = Path.GetDirectoryName(new Uri(typeof(Logging).Assembly.Location).AbsolutePath);
+			var here = Path.GetDirectoryName(new Uri(typeof(Logging).Assembly.CodeBase).LocalPath);
 
 			var builder = new LoggerConfiguration()
 				.MinimumLevel.Is(Serilog.Events.LogEventLevel.Information)
