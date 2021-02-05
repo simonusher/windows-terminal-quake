@@ -4,12 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Windows.Automation;
 using System.Windows.Forms;
 using WindowsTerminalQuake.Native;
-using System.Diagnostics;
-using System.Threading;
-using System.Timers;
 
 namespace WindowsTerminalQuake
 {
@@ -118,10 +115,10 @@ namespace WindowsTerminalQuake
 			else
 			{
 				Log.Information("Open");
-				FocusTracker.FocusGained(_process);
-
 				User32.ShowWindow(_process.MainWindowHandle, NCmdShow.RESTORE);
 				User32.SetForegroundWindow(_process.MainWindowHandle);
+				FocusTracker.FocusGained(_process);
+
 				var newY = bounds.Y + Settings.Instance.VerticalOffset;
 
 				User32.MoveWindow(_process.MainWindowHandle, x, newY, horWidth, bounds.Height, true);
@@ -134,7 +131,7 @@ namespace WindowsTerminalQuake
 
 		public void Toggle(bool open, int durationMs)
 		{
-			if(durationMs == 0)
+			if (durationMs == 0)
 			{
 				ToggleInstant(open);
 				return;
@@ -179,11 +176,11 @@ namespace WindowsTerminalQuake
 				Log.Information("Close");
 
 				User32.ShowWindow(_process.MainWindowHandle, NCmdShow.RESTORE);
-				User32.SetForegroundWindow(_process.MainWindowHandle);
+				//User32.SetForegroundWindow(_process.MainWindowHandle);
 
 				timer.Elapsed += (source, e) =>
 				{
-					double elapsedPercentage =  getPercentage(sw, durationMs);
+					double elapsedPercentage = getPercentage(sw, durationMs);
 					Log.Information(elapsedPercentage.ToString());
 
 					int hiddenAmount = (int)(bounds.Height * (1 - elapsedPercentage));
@@ -195,7 +192,7 @@ namespace WindowsTerminalQuake
 
 					User32.MoveWindow(_process.MainWindowHandle, x, newY, horWidth, bounds.Height, true);
 
-					if(elapsedPercentage == 1)
+					if (elapsedPercentage == 1)
 					{
 						// Minimize, so the last window gets focus
 						User32.ShowWindow(_process.MainWindowHandle, NCmdShow.MINIMIZE);
@@ -213,10 +210,10 @@ namespace WindowsTerminalQuake
 			else
 			{
 				Log.Information("Open");
-				FocusTracker.FocusGained(_process);
 
 				User32.ShowWindow(_process.MainWindowHandle, NCmdShow.RESTORE);
 				User32.SetForegroundWindow(_process.MainWindowHandle);
+				FocusTracker.FocusGained(_process);
 
 				timer.Elapsed += (source, e) =>
 				{

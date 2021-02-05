@@ -1,6 +1,7 @@
 ﻿using Serilog;
 using System;
 using System.Linq;
+using System.Windows.Automation;
 using System.Windows.Forms;
 using WindowsTerminalQuake.Native;
 using WindowsTerminalQuake.UI;

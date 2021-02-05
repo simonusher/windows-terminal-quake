@@ -30,6 +30,8 @@ namespace WindowsTerminalQuake
 				);
 			}
 
+			//builder.WriteTo.Debug();
+
 			Log.Logger = builder.CreateLogger();
 
 			Log.Information("Windows Terminal Quake started");
