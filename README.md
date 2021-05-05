@@ -2,10 +2,11 @@
 # windows-terminal-quake
 ## Disclaimer
 This is my fork of windows-terminal-quake project. I created it when I was frustrated with how badly the original one was animated. The main changes are:
-- fixed how the path to settings is read (I think this one was already resolved in the original project)
+- fixed how the path to settings is read,
 - made the window animate using stopwatch allowing for higher framerate.
+I think both were already resolved in the original project.
 
-The fork is **not under active development**. I don't have time to contribute to the original project right now, but if anyone would like to incorporate the animation change into it then please message me.
+The fork is **not under active development**.
 
 Original readme below.
 ***
