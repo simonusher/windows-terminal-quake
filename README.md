@@ -1,5 +1,15 @@
 
 # windows-terminal-quake
+## Disclaimer
+This is my fork of windows-terminal-quake project. I created it when I was frustrated with how badly the original one was animated. The main changes are:
+- fixed how the path to settings is read (I think this one was already resolved in the original project)
+- made the window animate using stopwatch allowing for higher framerate.
+
+The fork is **not under active development**. I don't have time to contribute to the original project right now, but if anyone would like to incorporate the animation change into it then please message me.
+
+Original readme below.
+***
+
 Companion program for the new Windows Terminal that enables Quake-style drop down
 
 ![Preview](https://files.flyingpie.nl/windows-terminal-quake/main.gif)
@@ -25,15 +35,19 @@ Changing the file automatically results in the app reloading the settings.
 
 Suggested by [Mike F](https://github.com/mikef-nl)
 
-- [Hot Keys](#hot-keys)
-- [Toggle Duration](#toggle-duration)
-- [Transparency](#transparency)
-- [Vertical Screen Coverage](#vertical-screen-coverage)
-- [Vertical Offset](#vertical-offset)
-- [Horizontal Screen Coverage](#horizontal-screen-coverage)
-- [Horizontal Align](#horizontal-align)
-- [Hide On Focus Lost](#hide-on-focus-lost)
-- [Always On Top](#always-on-top)
+- [windows-terminal-quake](#windows-terminal-quake)
+  - [Disclaimer](#disclaimer)
+  - [Usage](#usage)
+  - [Settings](#settings)
+  - [Hot Keys](#hot-keys)
+  - [Toggle Duration](#toggle-duration)
+  - [Transparency](#transparency)
+  - [Vertical Screen Coverage](#vertical-screen-coverage)
+  - [Vertical Offset](#vertical-offset)
+  - [Horizontal Screen Coverage](#horizontal-screen-coverage)
+  - [Horizontal Align](#horizontal-align)
+  - [Hide On Focus Lost](#hide-on-focus-lost)
+  - [Always On Top](#always-on-top)
 
 ## Hot Keys
 Multiple hot keys are supported, with an optional modifier.
